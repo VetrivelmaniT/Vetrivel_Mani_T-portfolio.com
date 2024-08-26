@@ -1,131 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    background-color: #121212;
+    font-family: 'Arial', sans-serif;
+    color: #b3b3b3;
+}
+
+.navbar-bg {
+    background-color: #1c1c1c;
+}
+
+.section-bg {
+    background-color: #1e1e1e;
+}
+
+.text-primary {
+    color: #ffffff;
+}
+
+.text-secondary {
+    color: #b3b3b3;
+}
+
+.btn-primary {
+    background-color: #1f8ef1;
+}
+
+.btn-primary:hover {
+    background-color: #1a74d1;
+}
+
+.rounded-image {
+    border-radius: 9999px;
+    /* Makes the image circular */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animated-bg {
+    background: linear-gradient(45deg, #add8e6, #b0e0e6, #add8e6);
+    /* Light blue gradient */
+    background-size: 300% 300%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+#resume {
+    background-color: #f8f9fa;
+    /* Light background color for contrast */
+}
+
+#resume h3 {
     color: #333;
-    background-color: #f4f0ff;
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
+    /* Dark text color for the heading */
 }
 
-header {
-    background-color: #0056b3;
-    color: white;
-    text-align: center;
-    padding: 1rem;
+#resume a {
+    font-size: 1rem;
+    /* Font size for the resume button */
+    transition: background-color 0.3s ease;
+    /* Smooth color transition */
 }
 
-nav {
-    background-color: #0056b3;
-    padding: 0.5rem;
-}
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-nav ul li {
-    margin: 0.5rem;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-main {
-    padding: 1rem;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.section {
-    background-color: white;
-    border-radius: 5px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    transition: all 0.3s ease;
-}
-
-.section:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
-}
-
-.hidden-content {
-    display: none;
-    padding-top: 1rem;
-}
-
-#profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 1rem auto;
-    display: block;
-}
-
-.view-resume {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-.view-resume:hover {
-    background-color: #0056b3;
-}
-
-/* Responsive styles */
-@media screen and (max-width: 768px) {
-    body {
-        font-size: 14px;
+@media (max-width: 768px) {
+    .text-lg {
+        font-size: 1rem;
     }
 
-    main {
-        padding: 0.5rem;
+    .text-xl {
+        font-size: 1.125rem;
     }
 
-    .section {
-        padding: 0.75rem;
+    .text-2xl {
+        font-size: 1.5rem;
     }
 
-    #profile-photo {
-        width: 120px;
-        height: 120px;
+    .text-3xl {
+        font-size: 1.875rem;
     }
 
-    .view-resume {
-        font-size: 1em;
+    .text-4xl {
+        font-size: 2.25rem;
+    }
+
+    .py-24 {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .px-4 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
 
-@media screen and (max-width: 480px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
+#contact .max-w-lg {
+    width: 90%;
+    /* Make the container width responsive */
+    padding: 4% 5%;
+    /* Adjust padding for smaller screens */
+}
+
+#contact h3 {
+    font-size: 2rem;
+    /* Smaller font size for headings on mobile */
+    margin-bottom: 6px;
+    /* Adjust bottom margin for smaller screens */
+}
+
+#contact .flex {
+    padding: 0 4%;
+    /* Adjust padding on sides for smaller screens */
+}
+
+#contact .flex a {
+    font-size: 0.875rem;
+    /* Adjust font size for links */
+}
+
+#contact .flex img {
+    width: 4rem;
+    /* Smaller icon size for mobile */
+    height: 4rem;
+}
+}
+
+#resume h3 {
+    font-size: 2rem;
+    /* Smaller font size for headings on mobile */
+    margin-bottom: 6px;
+    /* Adjust bottom margin for smaller screens */
+}
+
+#resume a {
+    font-size: 0.875rem;
+    /* Adjust font size for the button */
+    padding: 10px 5px;
+    /* Adjust padding for smaller screens */
+}
+}
+
+/* Tablet Responsiveness */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #contact .max-w-lg {
+        width: 80%;
+        /* Adjust width for tablets */
+        padding: 5% 6%;
+        /* Adjust padding for tablets */
     }
 
-    nav ul li {
-        margin: 0.25rem 0;
+    #contact h3 {
+        font-size: 2.5rem;
+        /* Slightly larger font size for tablets */
     }
 
-    .section:hover {
-        transform: none;
+    #contact .flex a {
+        font-size: 1rem;
+        /* Adjust font size for tablets */
     }
 
-    #profile-photo {
-        width: 100px;
-        height: 100px;
+    #contact .flex img {
+        width: 5rem;
+        /* Slightly larger icon size for tablets */
+        height: 5rem;
     }
+}
+
+#resume h3 {
+    font-size: 2.5rem;
+    /* Slightly larger font size for tablets */
+}
+
+#resume a {
+    font-size: 1rem;
+    /* Adjust font size for the button */
+    padding: 12px 8px;
+    /* Adjust padding for tablets */
+}
 }
