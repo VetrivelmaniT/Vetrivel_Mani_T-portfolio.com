@@ -5,456 +5,417 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VETRIVEL MANI T Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #121212;
-            font-family: 'Arial', sans-serif;
-        }
-
-        .section-bg {
-            background:#111111;
-        }
-
-        .navbar-bg {
-            background-color: #000000;
-        }
-
-        .text-primary {
-            color: #0f0f0f;
-        }
-        
-        .text-primary1 {
-            color: #ffffff;
-        }
-
-        .text-secondary {
-            color: #b3b3b3;
-        }
-
-        .btn-primary {
-            background-color: #1f8ef1;
-        }
-
-        .btn-primary:hover {
-            background-color: #1a74d1;
-        }
-
-        .rounded-image {
-            border-radius: 9999px;
-            /* Makes the image circular */
-        }
-
-        @keyframes gradientAnimation {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        .animated-bg {
-            background: linear-gradient(45deg, #ff6b6b, #f0f0f0, #ff6b6b);
-            background-size: 300% 300%;
-            animation: gradientAnimation 15s ease infinite;
-        }
-
-        @media (max-width: 768px) {
-            .text-lg {
-                font-size: 1rem;
-            }
-
-            .text-xl {
-                font-size: 1.125rem;
-            }
-
-            .text-2xl {
-                font-size: 1.5rem;
-            }
-
-            .text-3xl {
-                font-size: 1.875rem;
-            }
-
-            .text-4xl {
-                font-size: 2.25rem;
-            }
-
-            .py-24 {
-                padding-top: 3rem;
-                padding-bottom: 3rem;
-            }
-
-            .px-4 {
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
-
-            .container {
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body class="text-secondary animated-bg">
 
     <!-- Navbar -->
-    <nav class="navbar-bg shadow-md">
-        <div class="container mx-auto px-4 py-3 flex flex-wrap items-center justify-between">
-            <h1 class="text-2xl font-bold text-primary1">VETRIVEL MANI T</h1>
-            <button class="text-primary1 md:hidden px-2 py-1" id="menu-toggle">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">VETRIVEL MANI T</h1>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                <svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
                 </svg>
             </button>
-            <ul id="menu" class="hidden md:flex space-x-6">
-                
-                <li><a href="#about" class="text-primary1 hover:text-blue-400">   About</a></li>
-                <li><a href="#education" class="text-primary1 hover:text-blue-400">Education</a></li>
-                <li><a href="#skills" class="text-primary1 hover:text-blue-400">Skills</a></li>
-                <li><a href="#internship" class="text-primary1 hover:text-blue-400">Internship</a></li>
-                <li><a href="#projects" class="text-primary1 hover:text-blue-400">Projects</a></li>
-                <li><a href="#contact" class="text-primary1 hover:text-blue-400">Contact</a></li>
+
+            <!-- Navbar Links -->
+            <ul id="menu" class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#internship" class="nav-link">Internship</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="section-bg text-primary1 text-center py-24">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold md:text-3xl sm:text-2xl">Hi, I'm VETRIVEL MANI T</h2>
-            <p class="text-xl mt-4 md:text-lg sm:text-base">SOFTWARE DEVELOPER</p>
+    <section class="hero-section">
+        <div class="container">
+            <h2 class="hero-title">Hi, I'm VETRIVEL MANI T</h2>
+            <p class="hero-subtitle">SOFTWARE DEVELOPER</p>
         </div>
     </section>
 
     <!-- About Me Section -->
-    <section id="about" class="container mx-auto px-4 py-24">
-        <div class="text-center mb-16">
-            <h3 class="text-3xl font-bold text-primary">About Me</h3>
+    <section id="about" class="about-section">
+        <div class="section-header">
+            <h3>ABOUT ME</h3>
         </div>
-        <div class="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8">
-            <div class="md:w-1/2">
-                <img src="https://i.ibb.co/nCKFx3s/T-VETRIVELMANI.jpg" alt="T-VETRIVELMAN" class="rounded-image mx-auto w-48 h-48 md:w-64 md:h-64">
+
+        <div class="about-content">
+            <div class="about-image">
+                <img src="https://i.ibb.co/nCKFx3s/T-VETRIVELMANI.jpg" alt="T-VETRIVELMANI" class="profile-image">
             </div>
-            <div class="md:w-1/2">
-                <p class="text-lg text-primary mb-4 text-justify">Motivated Software Developer with full-stack experience, skilled in building responsive UIs and robust backend systems. Proficient in modern programming languages and tools, with a strong focus on problem-solving and efficient development. Seeking to contribute to innovative projects in a dynamic tech environment.</p>
-            </div>
-        </div>
-    </section>
-    <!-- VISIONARY Section -->
-    <section id="" class="container mx-auto px-4 py-24">
-        <div class="text-center mb-16">
-            <h3 class="text-3xl font-bold text-primary">Visionary Approach</h3>
-        </div>
-        <div class="bg-gray-800 p-8 rounded-lg shadow-md">
-            <div class="text-primary space-y-6">
-                <div>
-                    <ul class="list-disc pl-5 text-secondary text-justify">
-                       <li>As an innovative software engineer with a passion for web, app, and UI/UX development, I am dedicated to integrating diverse technical skills to drive innovation and create engaging, interactive experiences.</li>
-                        <li>My goal is to blend expertise in software development with web and app design to produce groundbreaking applications and user-friendly interfaces. I aim to leverage emerging technologies, including AI and machine learning, to develop intelligent mechanics, realistic simulations, and enhanced user interactions.</li>
-                        <li>I am committed to exploring new dimensions of interactive technology and pushing the boundaries of what is possible in software, web, and app design, aspiring to lead projects that redefine user experiences and drive industry innovation.</li>
-                    </ul>
-                </div>
+
+            <div class="about-text">
+                <p>
+                    Dynamic Software Developer with full-stack expertise, creating responsive interfaces and
+                    high-performance backend systems. Proficient in modern technologies, with a strong focus on
+                    problem-solving and delivering scalable solutions. Passionate about driving innovation and
+                    contributing to cutting-edge projects that make a measurable impact.
+                </p>
             </div>
         </div>
     </section>
 
+    <!-- Visionary Section -->
+    <section id="visionary" class="visionary-section">
+        <div class="section-header">
+            <h3>VISIONARY APPROACH</h3>
+        </div>
+
+        <div class="visionary-content">
+            <ul>
+                <li>
+                    As an innovative software engineer with a passion for web, app, and UI/UX development,
+                    I am dedicated to integrating diverse technical skills to drive innovation and create engaging,
+                    interactive experiences.
+                </li>
+                <li>
+                    My goal is to blend expertise in software development with web and app design to produce
+                    groundbreaking applications and user-friendly interfaces. I aim to leverage emerging technologies,
+                    including AI and machine learning, to develop intelligent mechanics, realistic simulations,
+                    and enhanced user interactions.
+                </li>
+                <li>
+                    I am committed to exploring new dimensions of interactive technology and pushing the
+                    boundaries of what is possible in software, web, and app design, aspiring to lead projects
+                    that redefine user experiences and drive industry innovation.
+                </li>
+            </ul>
+        </div>
+    </section>
 
     <!-- Education Section -->
-    <section id="education" class="container mx-auto px-4 py-24">
-        <div class="text-center mb-16">
-            <h3 class="text-3xl font-bold text-primary">Education</h3>
+    <section id="education" class="education-section">
+        <div class="section-header">
+            <h3>EDUCATION</h3>
         </div>
-        <div class="bg-gray-800 p-8 rounded-lg shadow-md">
-            <div class="text-primary1 space-y-6">
-                <div>
-                    <h4 class="text-xl font-bold">Bachelor of Engineering in Mechanical Engineering</h4>
-                    <p class="text-secondary mt-2">AAA College of Engineering and Technology</p>
-                    <p class="text-secondary mt-2">CGPA: 8.1</p>
-                    <p class="text-secondary mt-2">2020 – 2024</p>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold">12th - Bio Maths</h4>
-                    <p class="text-secondary mt-2">Sri Kandasamy Vidyalayam Higher Secondary School, Madurai.</p>
-                    <p class="text-secondary mt-2">Percentage: 58.33%</p>
-                    <p class="text-secondary mt-2">2019 - 2020</p>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold">10th</h4>
-                    <p class="text-secondary mt-2">Sri Kandasamy Vidyalayam Higher Secondary School, Madurai.</p>
-                    <p class="text-secondary mt-2">Percentage: 84.2%</p>
-                    <p class="text-secondary mt-2">2017 - 2018</p>
-                </div>
+
+        <div class="education-content">
+            <div class="education-item">
+                <h4>Bachelor of Engineering in Mechanical Engineering</h4>
+                <p class="school">AAA College of Engineering and Technology</p>
+                <p class="details">CGPA: 8.1</p>
+                <p class="details">2020 – 2024</p>
+            </div>
+
+            <div class="education-item">
+                <h4>12th - Bio Maths</h4>
+                <p class="school">Sri Kandasamy Vidyalayam Higher Secondary School, Madurai</p>
+                <p class="details">Percentage: 58.33%</p>
+                <p class="details">2019 – 2020</p>
+            </div>
+
+            <div class="education-item">
+                <h4>10th</h4>
+                <p class="school">Sri Kandasamy Vidyalayam Higher Secondary School, Madurai</p>
+                <p class="details">Percentage: 84.2%</p>
+                <p class="details">2017 – 2018</p>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="container mx-auto px-4 py-24">
-        <div class="text-center mb-16">
-            <h3 class="text-3xl font-bold text-primary">Skills</h3>
+    <section id="skills" class="skills-section">
+        <div class="section-header">
+            <h3>SKILLS</h3>
         </div>
-        <div class="grid grid-cols-2 gap-4 md:flex md:flex-wrap md:justify-center md:space-y-0 md:space-x-10 text-center">
-            <!-- HTML -->
-            <div class="flex flex-col items-center mb-8">
-                <img src="https://img.icons8.com/color/64/000000/html-5.png" alt="HTML" class="w-16 h-16 transition-transform transform hover:scale-110 hover:shadow-lg hover:shadow-orange-500/50">
-                <p class="text-lg font-bold mt-4 text-primary">HTML</p>
-            </div>
-            <!-- CSS -->
-            <div class="flex flex-col items-center mb-8">
-                <img src="https://img.icons8.com/color/64/000000/css3.png" alt="CSS" class="w-16 h-16 transition-transform transform hover:scale-110 hover:shadow-lg hover:shadow-blue-500/50">
-                <p class="text-lg font-bold mt-4 text-primary">CSS</p>
-            </div>
-            <!-- JavaScript -->
-            <div class="flex flex-col items-center mb-8">
-                <img src="https://img.icons8.com/color/64/000000/javascript.png" alt="JavaScript" class="w-16 h-16 transition-transform transform hover:scale-110 hover:shadow-lg hover:shadow-yellow-500/50">
-                <p class="text-lg font-bold mt-4 text-primary">JavaScript</p>
-            </div>
-            <!-- Figma -->
-            <div class="flex flex-col items-center mb-8">
-                <img src="https://img.icons8.com/color/64/000000/figma.png" alt="JavaScript" class="w-16 h-16 transition-transform transform hover:scale-110 hover:shadow-lg hover:shadow-yellow-500/50">
-                <p class="text-lg font-bold mt-4 text-primary">Figma</p>
+
+        <div class="skills-container">
+            <div class="skill-item">
+                <img src="https://img.icons8.com/color/64/000000/html-5.png" alt="HTML">
+                <p>HTML</p>
             </div>
 
-            <!-- Python -->
-            <div class="flex flex-col items-center mb-8">
-                <img src="https://img.icons8.com/color/64/000000/python.png" alt="Python" class="w-16 h-16 transition-transform transform hover:scale-110 hover:shadow-lg hover:shadow-red-500/50">
-                <p class="text-lg font-bold mt-4 text-primary">Fundamental Python</p>
+            <div class="skill-item">
+                <img src="https://img.icons8.com/color/64/000000/css3.png" alt="CSS">
+                <p>CSS</p>
             </div>
-            <!-- PHP -->
-            <div class="flex flex-col items-center mb-8">
-                <img src="https://img.icons8.com/color/64/000000/php.png" alt="PHP" class="w-16 h-16 transition-transform transform hover:scale-110 hover:shadow-lg hover:shadow-indigo-500/50">
-                <p class="text-lg font-bold mt-4 text-primary">Fundamental <br />PHP Development</p>
+
+            <div class="skill-item">
+                <img src="https://img.icons8.com/color/64/000000/javascript.png" alt="JavaScript">
+                <p>JavaScript</p>
             </div>
-            <!-- Java -->
-            <div class="flex flex-col items-center mb-8">
-                <img src="https://img.icons8.com/color/64/000000/java-coffee-cup-logo.png" alt="Java" class="w-16 h-16 transition-transform transform hover:scale-110 hover:shadow-lg hover:shadow-red-500/50">
-                <p class="text-lg font-bold mt-4 text-primary">Fundamental JAVA</p>
+
+            <div class="skill-item">
+                <img src="https://img.icons8.com/color/64/000000/figma.png" alt="Figma">
+                <p>Figma</p>
             </div>
-            <!-- C++ -->
-            <div class="flex flex-col items-center mb-8">
-                <img src="https://img.icons8.com/color/64/000000/c-plus-plus-logo.png" alt="C++" class="w-16 h-16 transition-transform transform hover:scale-110 hover:shadow-lg hover:shadow-blue-400/50">
-                <p class="text-lg font-bold mt-4 text-primary">Fundamental C++</p>
+
+            <div class="skill-item">
+                <img src="https://img.icons8.com/color/64/000000/python.png" alt="Python">
+                <p>Fundamental Python</p>
             </div>
-            <!-- React.js -->
-            <div class="flex flex-col items-center mb-8">
-                <img src="https://img.icons8.com/ios/50/000000/react-native.png" alt="React.js" class="w-16 h-16 transition-transform transform hover:scale-110 hover:shadow-lg hover:shadow-blue-400/50">
-                <p class="text-lg font-bold mt-4 text-primary">React JS</p>
+
+            <div class="skill-item">
+                <img src="https://img.icons8.com/color/64/000000/java-coffee-cup-logo.png" alt="Java">
+                <p>Fundamental JAVA</p>
             </div>
-            <!-- MySQL -->
-            <div class="flex flex-col items-center mb-8">
-                <img src="https://img.icons8.com/color/64/000000/mysql-logo.png" alt="MySQL" class="w-16 h-16 transition-transform transform hover:scale-110 hover:shadow-lg hover:shadow-blue-600/50">
-                <p class="text-lg font-bold mt-4 text-primary">MYSQL</p>
+
+            <div class="skill-item">
+                <img src="https://img.icons8.com/color/64/000000/c-plus-plus-logo.png" alt="C++">
+                <p>Fundamental C++</p>
             </div>
-        </div>
-    </section>
-    <!-- Co-Curricular-->
-    <section id="" class="container mx-auto px-4 py-24">
-        <div class="text-center mb-16">
-            <h3 class="text-3xl font-bold text-primary">Co-Curricular</h3>
-        </div>
-        <div class="bg-gray-800 p-8 rounded-lg shadow-md">
-            <div class="text-primary1 space-y-6">
-                <div>
-                    <h4 class="text-xl font-bold">Co-Curricular Activities</h4>
-                    <ul class="list-disc pl-5 text-secondary">
-                        <li>Participated in the ‘Reverse Engineering’ competition held at MIT.</li>
-                        <li>Attended a workshop on ‘Session on Innovation/Prototype Validation – Converting Innovation into a Start-up.’</li>
-                        <li>Participated in the event ‘SEA TREK – Technical Quiz in Automobile Knowledge.’</li>
-                    </ul>
-                </div>
+
+            <div class="skill-item">
+                <img src="https://img.icons8.com/ios/50/000000/react-native.png" alt="React.js">
+                <p>React JS</p>
             </div>
-        </div>
-    </section>
-    <!--Awards & Achievements-->
-    <section id="" class="container mx-auto px-4 py-24">
-        <div class="text-center mb-16">
-            <h3 class="text-3xl font-bold text-primary">Awards & Achievements</h3>
-        </div>
-        <div class="bg-gray-800 p-8 rounded-lg shadow-md">
-            <div class="text-primary1 space-y-6">
-                <div>
-                    <h4 class="text-xl font-bold">Co-Curricular Activities</h4>
-                    <ul class="list-disc pl-5 text-secondary">
-                        <li>Achieved first prize in the 'Iquid' event at the National Level technical symposium, 'GENESIS'23.'</li>
-                        <li>Earned runner-up position in a paper presentation on the topic 'Semi-Automation Dishwasher' at the National Level technical symposium, 'ENXENEIRO'23.'</li>
-                        <li>Received a special award for 'National Service Scheme' club activities at AAACET.</li>
-                    </ul>
-                </div>
+
+            <div class="skill-item">
+                <img src="https://img.icons8.com/color/64/000000/mysql-logo.png" alt="MySQL">
+                <p>MYSQL</p>
             </div>
         </div>
     </section>
 
+    <!-- Co-Curricular Section -->
+    <section id="co-curricular" class="co-curricular-section">
+        <div class="section-header">
+            <h3>CO-CURRICULAR</h3>
+        </div>
+
+        <div class="co-curricular-content">
+            <div class="co-curricular-item">
+                <h4>Co-Curricular Activities</h4>
+                <ul>
+                    <li>Participated in the 'Reverse Engineering' competition held at MIT.</li>
+                    <li>Attended a workshop on 'Session on Innovation/Prototype Validation – Converting Innovation into
+                        a Start-up.'</li>
+                    <li>Participated in the event 'SEA TREK – Technical Quiz in Automobile Knowledge.'</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+ <!-- AWARDS & ACHIEVEMENTS SECTION -->
+<section id="awards-achievements" class="awards-section">
+    <div class="section-header">
+        <h3>AWARDS & ACHIEVEMENTS</h3>
+    </div>
+
+    <div class="awards-gallery">
+        <img src="https://i.ibb.co/8D1cHVcp/IMG-20230308-WA0001.jpg" alt="Genesis'23 Event Award">
+        <img src="https://i.ibb.co/1x5vTPP/IMG-20230227-WA0008.jpg" alt="">
+        <img src="https://i.ibb.co/vvkPcTWD/IMG-20230303-WA0002.jpg" alt="NSS Club Recognition">
+    </div>
+
+    <div class="awards-content">
+        <div class="awards-item">
+            <h4>ACHIEVEMENTS</h4>
+            <ul>
+                <li>🏆 Secured <strong>First Prize</strong> in the <em>“Iquid”</em> event at the National Level Technical Symposium <strong>GENESIS’23</strong>.</li>
+                <li>🎓 Won the <strong>Runner-Up</strong> position in a Paper Presentation on <em>“Semi-Automation Dishwasher”</em> at <strong>ENXENEIRO’23</strong>.</li>
+                <li>🤝 Honored with a <strong>Special Award</strong> for contributions to <em>National Service Scheme (NSS)</em> club activities at <strong>AAACET</strong>.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Experience Section -->
+    <section id="experience" class="internship-section">
+        <div class="section-header">
+            <h3>EXPERIENCE</h3>
+        </div>
+
+        <div class="internship-content">
+            <div class="internship-item">
+                <h4>Backend Developer | Neeyamo Workshop Solutions Pvt Ltd.</h4>
+                <p class="details">October 2024 - January 2025</p>
+                <p>Developed backend services for e-commerce applications using Python and the Django framework:</p>
+                <ul>
+                    <li>Implemented order confirmation emails and streamlined the order processing workflow for an
+                        e-commerce store.</li>
+                    <li>Worked on processing credit card payments and integrated payment gateways to ensure seamless
+                        transactions.</li>
+                    <li>Ensured scalability and performance optimization of backend systems to handle high traffic and
+                        large volumes of orders.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
     <!-- Internship Section -->
-    <section id="internship" class="container mx-auto px-4 py-24">
-        <div class="text-center mb-16">
-            <h3 class="text-3xl font-bold text-primary">Internship & Inplant Training</h3>
+    <section id="internship" class="internship-section">
+        <div class="section-header">
+            <h3>INTERNSHIP & INPLANT TRAINING</h3>
         </div>
-        <div class="bg-gray-800 p-8 rounded-lg shadow-md">
-            <div class="text-primary1 space-y-6">
-                <div>
-                    <h4 class="text-xl font-bold">Backend Developer | Neeyamo Enterprise Solutions Pvt. Ltd. October 2024 - January 2025</h4>
-                    <p class="text-secondary mt-2">Developed backend services for e-commerce applications using Python and the Django framework:</p>
-                    <ul class="list-disc pl-5 text-secondary">
-                        <li>Implemented order confirmation emails and streamlined the order processing workflow for an e-commerce store.</li>
-                        <li>Worked on processing credit card payments and integrated payment gateways to ensure seamless transactions.</li>
-                        <li>Ensured scalability and performance optimization of backend systems to handle high traffic and large volumes of orders.</li>
-                    </ul>
-                </div>
+        <div class="internship-content">
+        <div class="internship-item">
+            <h4>Certification Course in Java Full Stack Development at Login360</h4>
+            <p>Successfully completed a comprehensive training program in Java Full Stack Development, focusing on both backend and frontend technologies.</p>
+            <ul>
+                <li>Developed RESTful APIs using <strong>Spring Boot</strong> and integrated with <strong>MySQL</strong> for database management.</li>
+                <li>Built dynamic user interfaces with <strong>ReactJS</strong> and implemented data communication using <strong>Axios</strong>.</li>
+                <li>Gained hands-on experience with <strong>Java</strong> programming, <strong>JPA</strong>, and project structuring using <strong>Maven</strong>.</li>
+                <li>Worked on end-to-end project development covering all layers of the Java Full Stack architecture.</li>
+            </ul>
+        </div>
+        </div>
 
-                
-                <div>
-                    <h4 class="text-xl font-bold">Fifteen-Day Internship Training at HandBuiltApps, Sivakasi</h4>
-                    <p class="text-secondary mt-2">During my internship at HandBuiltApps, I focused on PHP backend development. My primary responsibilities included:</p>
-                    <ul class="list-disc pl-5 text-secondary">
-                        <li>Implementing the RB Club's PA member sorting and generating comprehensive member details lists using PHP.</li>
-                        <li>Managing the process of sending request emails to PA members.</li>
-                        <li>Identifying and debugging issues related to email requests and other backend processes.</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold">Fifteen-Day Internship Training at Phoenix Softech, Madurai</h4>
-                    <p class="text-secondary mt-2">During my internship at Phoenix Softech, I concentrated on the basics of Python Machine Learning. My primary work involved</p>
-                    <ul class="list-disc pl-5 text-secondary">
-                        <li>Understanding fundamental concepts of machine learning and their applications.</li>
-                        <li>Exploring Python libraries and tools used for data analysis and machine learning tasks.</li>
-                        <li>Participating in hands-on projects and learning exercises to build practical skills.</li>
-                    </ul>
-                </div>
+        <div class="internship-content">
+            <!-- HandBuiltApps Internship -->
+            <div class="internship-item">
+                <h4>Fifteen-Day Internship Training at HandBuiltApps, Sivakasi</h4>
+                <p>During my internship at HandBuiltApps, I focused on PHP backend development. My primary
+                    responsibilities included:</p>
+                <ul>
+                    <li>Implementing the RB Club's PA member sorting and generating comprehensive member details lists
+                        using PHP.</li>
+                    <li>Managing the process of sending request emails to PA members.</li>
+                    <li>Identifying and debugging issues related to email requests and other backend processes.</li>
+                </ul>
+            </div>
+
+            <!-- Phoenix Softech Internship -->
+            <div class="internship-item">
+                <h4>Fifteen-Day Internship Training at Phoenix Softech, Madurai</h4>
+                <p>During my internship at Phoenix Softech, I concentrated on the basics of Python Machine Learning. My
+                    primary work involved:</p>
+                <ul>
+                    <li>Understanding fundamental concepts of machine learning and their applications.</li>
+                    <li>Exploring Python libraries and tools used for data analysis and machine learning tasks.</li>
+                    <li>Participating in hands-on projects and learning exercises to build practical skills.</li>
+                </ul>
             </div>
         </div>
     </section>
-    <!-- MEMBERSHIP IN PROFESSIONAL BODIES-->
-    <section id="" class="container mx-auto px-4 py-24">
-        <div class="text-center mb-16">
-            <h3 class="text-3xl font-bold text-primary">Membershop In Professional Bodies</h3>
+    
+
+    <!-- Membership in Professional Bodies -->
+    <section class="membership-section">
+        <div class="section-header">
+            <h3>MEMBERSHIP IN PROFESSIONAL BODIES</h3>
         </div>
-        <div class="bg-gray-800 p-8 rounded-lg shadow-md">
-            <div class="text-primary1 space-y-6">
-                <div>
-                    <h4 class="text-xl font-bold">Co-Curricular Activities</h4>
-                    <ul class="list-disc pl-5 text-secondary">
-                        <li>Member of Institution’s Innovation Council (08/2020 – 05/2024)</li>
-                        <li>Member of SAE India Southern Section (06/2022 – 06/2024)</li>
-                        <li>Served as Chairperson of SAE India Southern Section (06/2022 – 06/2024)</li>
-                    </ul>
-                </div>
+
+        <div class="membership-content">
+            <div class="membership-item">
+                <h4>Professional Memberships</h4>
+                <ul>
+                    <li>Member of Institution's Innovation Council (08/2020 – 05/2024)</li>
+                    <li>Member of SAE India Southern Section (06/2022 – 06/2024)</li>
+                    <li>Served as Chairperson of SAE India Southern Section (06/2022 – 06/2024)</li>
+                </ul>
             </div>
         </div>
     </section>
 
     <!-- My Projects Section -->
-    <section id="projects" class="container mx-auto px-4 py-24 animated-bg">
-        <div class="text-center mb-16">
-            <h3 class="text-3xl font-bold text-primary">My Projects</h3>
+    <section id="projects" class="projects-section">
+        <div class="section-header">
+            <h3>MY PROJECTS</h3>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Project 1 -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-                <h4 class="text-xl font-bold text-primary1">Project One</h4>
-                <p class="text-secondary mt-2">Watermarking-Based-Framework-for-Secure-Image-Authentication</p>
-                <a href="https://github.com/VetrivelmaniT/Watermarking-Based-Framework-for-Secure-Image-Authentication" class="btn-primary mt-4 inline-block px-4 py-2 rounded text-white">View Project</a>
-            </div>
-            <!-- Project 2 -->
-             <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-                <h4 class="text-xl font-bold text-primary1">Project Two</h4>
-                <p class="text-secondary mt-2">DressFlow-Solutions – Python Email Order Automation</p>
-                <a href="https://github.com/VetrivelmaniT/DressFlow-Solutions" class="btn-primary mt-4 inline-block px-4 py-2 rounded text-white">View Project</a>
-            </div>
-            
-            <!-- Project 3 -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-                <h4 class="text-xl font-bold text-primary1">Project Three</h4>
-                <p class="text-secondary mt-2">UI/UX designs for the frontend were crafted by Easy-Chat</p>
-                <a href="https://www.figma.com/proto/SQefKwmspENQc0TheNqrBU/Easy-Chat?t=aJtaWdYcJXB6oLhs-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=3-93&starting-point-node-id=3%3A93" class="btn-primary mt-4 inline-block px-4 py-2 rounded text-white">View Project</a>
-            </div>
-            <!-- Project 4 -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-                <h4 class="text-xl font-bold text-primary1">Project Four</h4>
-                <p class="text-secondary mt-2">UI/UX designs for the frontend were crafted by Race-Bike-Game</p>
-                <a href="https://www.figma.com/proto/Trz8nmRgeauasaGBnFjoME/Race-Bike-Game?t=GMYSiHxE4iWoeFFj-1" class="btn-primary mt-4 inline-block px-4 py-2 rounded text-white">View Project</a>
-            </div>
-            <!-- Project 5 -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-                <h4 class="text-xl font-bold text-primary1">Project Five</h4>
-                 <p class="text-secondary mt-2">UI/UX designs for the frontend were crafted by HAPYJOURN</p>
-                <a href="https://www.figma.com/proto/o73B3Qhwfty6n5JRAU6jmJ/HAPYJOURN?t=yfKEe4Vhmi1M6u7y-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=2-20&starting-point-node-id=2%3A20" class="btn-primary mt-4 inline-block px-4 py-2 rounded text-white">View Project</a>
-               
-                </div>
-            <!-- Project 6 -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-                <h4 class="text-xl font-bold text-primary1">Project Six</h4>
-                <p class="text-secondary mt-2">UI/UX designs for the frontend were crafted by Trendy_Dress_Store</p>
-                <a href="https://www.figma.com/proto/x4fZFLT9NyKyokBXgOeWrd/Trendy_Dress_Store?t=GMYSiHxE4iWoeFFj-1" class="btn-primary mt-4 inline-block px-4 py-2 rounded text-white">View Project</a>
-            </div>
-            <!-- Project 7 -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-                <h4 class="text-xl font-bold text-primary1">Project Seven</h4>
-                <p class="text-secondary mt-2">UI/UX designs for the frontend were crafted by Veyil_frame_works</p>
-                <a href="https://www.figma.com/proto/QGAEbbtUG5pambD2bdvL28/Veyil_frame_works?t=GMYSiHxE4iWoeFFj-1" class="btn-primary mt-4 inline-block px-4 py-2 rounded text-white">View Project</a>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <h4>ShopEase – E-Commerce Platform</h4>
+                <p>
+                    A full-stack e-commerce application built with <strong>Java Spring Boot</strong>,
+                    <strong>ReactJS</strong>, and <strong>MySQL</strong>, offering secure, scalable,
+                    and seamless online shopping experiences.
+                </p>
+                <a href="https://github.com/VetrivelmaniT/Ecommerce-java-fullstack" target="_blank" class="btn">View
+                    Project</a>
             </div>
 
-              
+            <div class="project-card">
+                <h4>DressFlow Solutions – Email Order Automation</h4>
+                <p>
+                    An automation tool built with <strong>Python</strong> to streamline <strong>email-based order
+                        processing</strong>,
+                    improving efficiency and reducing manual effort.
+                </p>
+                <a href="https://github.com/VetrivelmaniT/DressFlow-Solutions" target="_blank" class="btn">View
+                    Project</a>
+            </div>
+
+            <div class="project-card">
+                <h4>LifePlus Care – Donation Awareness Website</h4>
+                <p>
+                    A responsive static website built with <strong>HTML</strong> and <strong>CSS</strong>,
+                    featuring smooth animations and informative sections that encourage
+                    <strong>blood</strong> and <strong>organ donation</strong>.
+                </p>
+                <a href="https://vetrivelmanit.github.io/LifePluseCare/" target="_blank" class="btn">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h4>ITech-System 🌐</h4>
+                <p>
+                    A responsive company website built with <strong>HTML</strong>, <strong>CSS</strong>,
+                    and <strong>JavaScript</strong>, showcasing IT services with a modern and interactive UI.
+                </p>
+                <a href="https://github.com/VetrivelmaniT/ITech-Systems" target="_blank" class="btn">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h4>Easy-Chat 💬</h4>
+                <p>
+                    A modern UI/UX prototype designed in <strong>Figma</strong> for a real-time chat application,
+                    focusing on simplicity and user experience.
+                </p>
+                <a href="https://www.figma.com/proto/SQefKwmspENQc0TheNqrBU/Easy-Chat?t=aJtaWdYcJXB6oLhs-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=3-93&starting-point-node-id=3%3A93"
+                    target="_blank" class="btn">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h4>Trendy Dress Store 👗</h4>
+                <p>
+                    A sleek <strong>Figma</strong> UI/UX prototype for an online fashion store,
+                    emphasizing modern design and a smooth shopping experience.
+                </p>
+                <a href="https://www.figma.com/proto/x4fZFLT9NyKyokBXgOeWrd/Trendy_Dress_Store?t=GMYSiHxE4iWoeFFj-1"
+                    target="_blank" class="btn">View Project</a>
+            </div>
         </div>
     </section>
-    <div class="spaceing">
-        <section id="resume" class="container mx-auto px-4 py-20 text-center">
-            <h3 class="text-3xl font-bold text-primary">Resume</h3>
-            <a href="https://drive.google.com/file/d/1MKhjs7pICr9VE7KVmGBvBYeqbCtvxD_m/view?usp=sharing"target="_blank" class="inline-block bg-blue-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-600 transition-colors">
-                View My Resume
-            </a>
-        </section>
-    </div>
 
+    <!-- Resume Section -->
+    <section id="resume" class="resume-section">
+        <h3>RESUME</h3>
+        <a href="https://drive.google.com/file/d/1gpwxxScUeuo9GkAXLIRnhql1GUFme9cb/view?usp=sharing" target="_blank"
+            class="btn-resume">
+            View My Resume
+        </a>
+    </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="container mx-auto px-4 py-20">
-        <h3 class="text-3xl font-bold text-center text-primary">Get In Touch</h3>
-        <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-md">
-            <div class="flex flex-col items-start space-y-4">
-                <!-- Email -->
-                <a href="mailto:tvetrivelmani@gmail.com" class="flex items-center space-x-2 text-gray-700 hover:text-blue-500">
-                    <img src="https://img.icons8.com/ios-filled/50/000000/email.png" alt="Email" class="w-6 h-6">
-                    <span class="font-bold">tvetrivelmani@gmail.com</span>
-                </a>
-                <!-- Phone -->
-                <a href="tel:+91 70947 77346" class="flex items-center space-x-2 text-gray-700 hover:text-blue-500">
-                    <img src="https://img.icons8.com/ios-filled/50/000000/phone.png" alt="Phone" class="w-6 h-6">
-                    <span class="font-bold">+91 70947 77346</span>
-                </a>
-                <!-- LinkedIn -->
-                <a href="https://www.linkedin.com/in/vetrivelmani/" target="_blank" class="flex items-center space-x-2 text-gray-700 hover:text-blue-500">
-                    <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="LinkedIn" class="w-6 h-6">
-                    <span class="font-bold">LinkedIn</span>
-                </a>
-                <!-- Behance -->
-                <a href="https://www.behance.net/vetrivelmani" target="_blank" class="flex items-center space-x-2 text-gray-700 hover:text-blue-500">
-                    <img src="https://img.icons8.com/ios-filled/50/000000/behance.png" alt="Behance" class="w-6 h-6">
-                    <span class="font-bold">Behance</span>
-                </a>
-
-            </div>
+    <section id="contact" class="contact-section">
+        <h3>GET IN TOUCH</h3>
+        <div class="contact-card">
+            <a href="mailto:tvetrivelmani@gmail.com" class="contact-item">
+                <img src="https://img.icons8.com/ios-filled/50/000000/email.png" alt="Email">
+                <span>tvetrivelmani@gmail.com</span>
+            </a>
+            <a href="tel:+917094777346" class="contact-item">
+                <img src="https://img.icons8.com/ios-filled/50/000000/phone.png" alt="Phone">
+                <span>+91 70947 77346</span>
+            </a>
+            <a href="https://www.linkedin.com/in/vetrivelmani/" target="_blank" class="contact-item">
+                <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="LinkedIn">
+                <span>LinkedIn</span>
+            </a>
+            <a href="https://www.behance.net/vetrivelmani" target="_blank" class="contact-item">
+                <img src="https://img.icons8.com/ios-filled/50/000000/behance.png" alt="Behance">
+                <span>Behance</span>
+            </a>
         </div>
     </section>
 
+    <!-- JavaScript -->
+    <script src="./script.js"></script>
 
-    <script>
-        // Mobile menu toggle
-        const menuToggle = document.getElementById('menu-toggle');
-        const menu = document.getElementById('menu');
-        menuToggle.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-    </script>
 </body>
 
 </html>
